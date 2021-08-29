@@ -52,5 +52,8 @@ class MenuFragment : Fragment(), MenuAdapter.OnOptionClick {
 
     override fun onOptionClick(position: Int, option: String) {
         Toast.makeText(requireContext(), option, Toast.LENGTH_LONG).show()
+        //hide menu
+        //accesing the parent activity's method.
+        (activity as MainActivity).hideMenu()
     }
 }

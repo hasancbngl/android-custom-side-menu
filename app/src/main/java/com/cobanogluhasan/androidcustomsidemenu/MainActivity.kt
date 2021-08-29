@@ -34,7 +34,8 @@ class MainActivity : AppCompatActivity() {
         } else hideMenu()
     }
 
-    private fun hideMenu() {
+    //hideMenu should not be private otherwise we can not acces from the child fragment.
+    fun hideMenu() {
         if (isMenuShowing) {
             //hide menu if it's showing
             binding.fragmentContainerView.visibility = View.INVISIBLE
