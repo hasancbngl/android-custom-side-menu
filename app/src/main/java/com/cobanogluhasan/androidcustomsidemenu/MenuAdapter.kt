@@ -12,7 +12,7 @@ class MenuAdapter(private val listener: OnOptionClick) :
     private val TAG = "MenuAdapter"
     private var optionList = emptyList<String>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         //inflate the layout file with viewbinding
         return ViewHolder(
             MenuListItemBinding.inflate(
@@ -23,7 +23,7 @@ class MenuAdapter(private val listener: OnOptionClick) :
         )
     }
 
-    override fun onBindViewHolder(holder: MenuAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         //bind the data to the view by calling bind function and pass the option string
         holder.bind(optionList[position])
     }

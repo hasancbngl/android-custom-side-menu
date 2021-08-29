@@ -4,4 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="com.cobanogluhasan.androidcustomsidemenu.MenuFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#ddd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
+    <!--
+    0.3 percentage of width means the gonna take 30% of the screen
+    give it any background color you want, I picked up gray.
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>
